@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fracture Systems Consulting LLC</title>
+<meta name="description" content="Operating data and reporting for acquirers of services firms. One operating model across every acquisition, from the first close through each add-on.">
+<meta name="theme-color" content="#12161c">
+<meta property="og:title" content="Fracture Systems Consulting LLC">
+<meta property="og:description" content="Every acquisition on the same numbers. Operating data and reporting for acquirers of services firms.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2312161c'/%3E%3Cpath d='M9 7h14v3h-10v5h9v3h-9v7h-4z' fill='%23f4f1ea'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --paper: #f6f4ef;
+    --paper-raised: #fffdf9;
+    --ink: #14181e;
+    --ink-soft: #414a56;
+    --ink-faint: #6d7784;
+    --rule: #d8d3c8;
+    --rule-soft: #e6e2d9;
+    --accent: #8c4a2f;
+    --accent-soft: #b8865f;
+    --band: #12161c;
+    --band-ink: #edeae3;
+    --band-faint: #9aa3ae;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #12151a;
+      --paper-raised: #191d24;
+      --ink: #ecebe6;
+      --ink-soft: #b3bac4;
+      --ink-faint: #8b939e;
+      --rule: #2c323b;
+      --rule-soft: #232830;
+      --accent: #d08f5f;
+      --accent-soft: #a87a52;
+      --band: #0b0e12;
+      --band-ink: #ecebe6;
+      --band-faint: #8b939e;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 17px/1.62 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-feature-settings: "kern" 1;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .display {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Source Serif Pro", Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.012em;
+    line-height: 1.14;
+    margin: 0;
+  }
+
+  p { margin: 0 0 1em; }
+  p:last-child { margin-bottom: 0; }
+
+  a { color: inherit; text-decoration-color: var(--accent-soft); text-underline-offset: 3px; }
+  a:hover { color: var(--accent); }
+
+  .wrap {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+  }
+
+  /* ---------- masthead ---------- */
+
+  .masthead {
+    border-bottom: 1px solid var(--rule);
+    padding: 26px 0 22px;
+  }
+
+  .masthead .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px 24px;
+  }
+
+  .wordmark {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .tagline {
+    font-size: 13.5px;
+    color: var(--ink-faint);
+  }
+
+  /* ---------- hero ---------- */
+
+  .hero { padding: 76px 0 68px; }
+
+  .hero h1 {
+    font-size: clamp(38px, 6.2vw, 62px);
+    max-width: 15ch;
+    margin-bottom: 26px;
+  }
+
+  .hero .lede {
+    max-width: 68ch;
+    font-size: clamp(17px, 1.6vw, 19px);
+    color: var(--ink-soft);
+  }
+
+  .hero .lede strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ---------- timeline band ---------- */
+
+  .band {
+    background: var(--band);
+    color: var(--band-ink);
+    padding: 52px 0 48px;
+  }
+
+  .band-caption {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--band-faint);
+    margin: 34px 0 0;
+  }
+
+  .track {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.16);
+    padding-top: 14px;
+  }
+
+  .stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 14px 0 0;
+  }
+
+  .stage::before {
+    content: "";
+    position: absolute;
+    top: -19px;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+  }
+
+  .stage-name {
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+  }
+
+  .stage-note {
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--band-faint);
+  }
+
+  .stage-work {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 12.5px;
+    color: var(--band-ink);
+  }
+
+  .stage-work span {
+    display: block;
+    color: var(--band-faint);
+    font-size: 11.5px;
+    margin-top: 2px;
+  }
+
+  /* ---------- offers ---------- */
+
+  .offers {
+    padding: 74px 0 10px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px;
+  }
+
+  .offer {
+    background: var(--paper-raised);
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--accent);
+    padding: 34px 32px 30px;
+  }
+
+  .offer h2 {
+    font-size: 27px;
+    margin-bottom: 10px;
+  }
+
+  .offer .terms {
+    font-size: 13px;
+    color: var(--ink-faint);
+    padding-bottom: 20px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+
+  .offer .terms b {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .offer .intro {
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    margin-bottom: 22px;
+  }
+
+  .offer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .offer li {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    padding: 0 0 16px 0;
+    margin: 0 0 16px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+
+  .offer li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .offer li b {
+    display: block;
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 15.5px;
+    margin-bottom: 2px;
+  }
+
+  /* ---------- continuity ---------- */
+
+  .continuity {
+    padding: 72px 0 66px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    gap: 48px;
+    align-items: start;
+  }
+
+  .continuity h2 {
+    font-size: clamp(28px, 3.4vw, 36px);
+    margin-bottom: 20px;
+    max-width: 20ch;
+  }
+
+  .continuity p {
+    max-width: 58ch;
+    color: var(--ink-soft);
+  }
+
+  .price-card {
+    border: 1px solid var(--rule);
+    background: var(--paper-raised);
+  }
+
+  .price-row {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+
+  .price-row:last-child { border-bottom: 0; }
+
+  .price-row .amount {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .price-row .what {
+    font-size: 13px;
+    color: var(--ink-faint);
+    margin-top: 4px;
+  }
+
+  /* ---------- principles ---------- */
+
+  .principles {
+    border-top: 1px solid var(--rule);
+    padding: 58px 0 62px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+  }
+
+  .principle h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+  }
+
+  .principle p {
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- built for ---------- */
+
+  .built-for {
+    border-top: 1px solid var(--rule);
+    padding: 46px 0 60px;
+  }
+
+  .built-for p {
+    max-width: 78ch;
+    font-size: 15.5px;
+    color: var(--ink-soft);
+  }
+
+  .built-for b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- footer ---------- */
+
+  footer {
+    background: var(--band);
+    color: var(--band-ink);
+    padding: 52px 0 56px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    gap: 40px;
+    align-items: start;
+  }
+
+  .footer-name {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .contact {
+    font-size: 15.5px;
+    line-height: 1.75;
+  }
+
+  .contact .place {
+    color: var(--band-faint);
+    font-size: 13.5px;
+  }
+
+  .disclaimer {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--band-faint);
+    max-width: 62ch;
+  }
+
+  @media (max-width: 940px) {
+    .track { grid-template-columns: repeat(3, 1fr); row-gap: 30px; }
+    .stage-work { margin-top: 14px; }
+    .offers { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+    .continuity { grid-template-columns: minmax(0, 1fr); gap: 34px; }
+    .principles { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+    .footer-grid { grid-template-columns: minmax(0, 1fr); }
+  }
+
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    .wrap { padding: 0 20px; }
+    .hero { padding: 54px 0 48px; }
+    .track { grid-template-columns: minmax(0, 1fr); row-gap: 26px; }
+    .offer { padding: 28px 22px 26px; }
+  }
+
+  @media print {
+    body { background: #fff; }
+    .band, footer { background: #fff; color: #000; }
+    .stage-note, .disclaimer, .contact .place { color: #444; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="wordmark">Fracture Systems Consulting LLC</div>
+    <div class="tagline">Operating data &amp; reporting for acquirers of services firms</div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Every acquisition on the same numbers</h1>
+      <p class="lede">You are buying firms that run on relationships, recurring revenue and a producer's book: wealth management, insurance agencies, accounting and advisory practices. Each one arrives with its own CRM, billing system, custodian or carrier feeds, and books that agree with none of them.</p>
+      <p class="lede"><strong>We give you one operating model across all of them from the first close, keep it comparable as add-ons land, and tell you before you sign what the next one will cost to fold in.</strong></p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="track">
+        <div class="stage">
+          <div class="stage-name">LOI signed</div>
+          <div class="stage-work">Systems &amp; data diligence<span>2 weeks · credited at close</span></div>
+        </div>
+        <div class="stage">
+          <div class="stage-name">Diligence window</div>
+          <div class="stage-note">Alongside QoE and legal, not in place of them.</div>
+        </div>
+        <div class="stage">
+          <div class="stage-name">Close</div>
+          <div class="stage-work">Operating visibility<span>6 weeks · read-only</span></div>
+        </div>
+        <div class="stage">
+          <div class="stage-name">First 100 days</div>
+          <div class="stage-note">One model of the platform, live.</div>
+        </div>
+        <div class="stage">
+          <div class="stage-name">Each add-on</div>
+          <div class="stage-work">Fold-in<span>3 weeks per add-on</span></div>
+        </div>
+        <div class="stage">
+          <div class="stage-name">Ongoing ownership</div>
+          <div class="stage-work">Monthly pack<span>board · lender · next buyer</span></div>
+        </div>
+      </div>
+      <p class="band-caption">One model, one set of definitions, however many firms come into it</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+
+    <section class="offers">
+
+      <article class="offer">
+        <p class="eyebrow">At the platform close</p>
+        <h2>Operating visibility</h2>
+        <p class="terms"><b>6 weeks · $30,000 · fixed fee</b> · read-only from day one</p>
+        <p class="intro">We connect with a credential and change nothing in the systems your new team is still running on.</p>
+        <ul>
+          <li><b>One model of the platform.</b> Clients and households, producers, recurring revenue (fees, premiums, retainers), receivables and cash in a single model, however many systems they came from.</li>
+          <li><b>Revenue and margin by client and producer, fully loaded.</b> Which books carry the firm, which clients are subsidised, and what walks out the door if a producer does.</li>
+          <li><b>Unbilled and leaked revenue.</b> Fees not billed, premiums not reconciled, work done and never invoiced. This is usually the first time anyone sees the whole of it.</li>
+          <li><b>Onboarding, transfer and service SLAs.</b> Where new clients stall and where retention breaks.</li>
+          <li><b>A monthly pack</b> your board, your lender and your eventual buyer can read, produced from the system rather than assembled by hand.</li>
+        </ul>
+      </article>
+
+      <article class="offer">
+        <p class="eyebrow">Before each add-on</p>
+        <h2>Systems and data diligence</h2>
+        <p class="terms"><b>2 weeks · $10,000 to $15,000</b> · credited against fold-in at close</p>
+        <p class="intro">Run inside your window, alongside quality of earnings and legal, not in place of them. Fee payable at close available for independent sponsors.</p>
+        <ul>
+          <li><b>Systems inventory.</b> What the target actually runs on, what is licensed, what is homegrown, and what nobody maintains.</li>
+          <li><b>Reproducibility.</b> Whether the revenue, AUM or book you were shown reproduces from the custodian, carrier or billing records that hold it. Findings handed to your QoE provider.</li>
+          <li><b>Key-person and process dependency.</b> What stops working the week the office manager leaves.</li>
+          <li><b>Fold-in cost.</b> What it takes to get this firm onto your model and off the seller's systems, and by when. A number for your model instead of an assumption.</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <section class="continuity">
+      <div>
+        <h2>Then each add-on folds in, and it keeps running</h2>
+        <p>Every acquisition is mapped into the model you already have, so month one of ownership reports on the same definitions as the platform. Nothing is bolted alongside. The retainer covers hosting, support and the monthly pack; add-ons raise the size of the model, not the price of the pack.</p>
+        <p>When you sell, the buyer's diligence team gets the same model you have been running on. The exit narrative is already written.</p>
+      </div>
+      <div class="price-card">
+        <div class="price-row">
+          <div class="amount">From $10,000</div>
+          <div class="what">Fold-in, per add-on · 3 weeks</div>
+        </div>
+        <div class="price-row">
+          <div class="amount">$2,500 / month</div>
+          <div class="what">Hosting · support · monthly pack</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="principles">
+      <div class="principle">
+        <p class="eyebrow">How it starts</p>
+        <h3>Read-only.</h3>
+        <p>Nothing changes in the acquired firm's systems, so the first phase carries no operational risk during the period when a migration would be most dangerous.</p>
+      </div>
+      <div class="principle">
+        <p class="eyebrow">What you own</p>
+        <h3>All of it.</h3>
+        <p>Your data throughout, exportable in full in a documented format whenever you ask. Isolation is enforced at the database, not by application code.</p>
+      </div>
+      <div class="principle">
+        <p class="eyebrow">How numbers are produced</p>
+        <h3>Traceably.</h3>
+        <p>Every figure opens to the records behind it. AI drafts, extracts and summarises; it never computes a number with financial consequence.</p>
+      </div>
+    </section>
+
+    <section class="built-for">
+      <p><b>Built for</b> private equity platforms, family offices, private wealth groups and other aggregators doing two or more add-ons a year in relationship-driven services, $10M to $150M enterprise value. Job-costed trades and contractors are a second track, on request.</p>
+    </section>
+
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-name">Fracture Systems Consulting LLC</div>
+        <div class="contact">
+          Matthew Bajdas<br>
+          <a href="mailto:matthew@fracturesystems.com">matthew@fracturesystems.com</a><br>
+          <a href="tel:+17166802667">716-680-2667</a><br>
+          <span class="place">Florida</span>
+        </div>
+      </div>
+      <p class="disclaimer">Fees are indicative and subject to scope. This document is for discussion and is not an offer. Final scope and terms subject to a written agreement. Not legal, tax or accounting advice, and not a substitute for quality of earnings or legal diligence.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
