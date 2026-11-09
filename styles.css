@@ -583,37 +583,6 @@ a:hover {
   font-size: 0.95rem;
 }
 
-/* Acquirer callout — not a floating promo sticker; full-width strip */
-.acquirer {
-  padding: 3.25rem 0;
-  background:
-    linear-gradient(90deg, rgba(52, 115, 158, 0.08), transparent 55%),
-    var(--paper-raised);
-  border-block: 1px solid var(--rule-soft);
-}
-
-.acquirer .wrap {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.25rem 2rem;
-}
-
-.acquirer h2 {
-  margin: 0 0 0.35rem;
-  font-family: var(--font-display);
-  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
-  font-weight: 600;
-  max-width: 22ch;
-}
-
-.acquirer p {
-  margin: 0;
-  color: var(--ink-soft);
-  max-width: 36rem;
-}
-
 /* Contact / intake */
 .contact {
   padding: 4.5rem 0 5rem;
@@ -763,80 +732,6 @@ a:hover {
 .footer-brand img {
   width: 1.65rem;
   height: auto;
-}
-
-/* Page hero for interior pages */
-.page-hero {
-  background:
-    radial-gradient(ellipse 70% 80% at 90% 20%, rgba(52, 115, 158, 0.22), transparent 55%),
-    linear-gradient(160deg, var(--navy-deep), var(--navy));
-  color: #f4f7fa;
-  padding: 4rem 0 3.25rem;
-}
-
-.page-hero h1 {
-  margin: 0 0 0.75rem;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(1.85rem, 3.5vw, 2.6rem);
-  letter-spacing: -0.02em;
-  max-width: 18ch;
-}
-
-.page-hero p {
-  margin: 0;
-  max-width: 40rem;
-  color: #c5d3df;
-  font-size: 1.1rem;
-}
-
-/* Roll-up content */
-.prose {
-  max-width: 42rem;
-}
-
-.prose h2 {
-  margin: 2.5rem 0 0.75rem;
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 600;
-}
-
-.prose p,
-.prose li {
-  color: var(--ink-soft);
-}
-
-.prose ul {
-  padding-left: 1.15rem;
-}
-
-.price-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 0.5rem 1.5rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--rule);
-  align-items: baseline;
-}
-
-.price-row strong {
-  font-family: var(--font-display);
-  font-weight: 600;
-  color: var(--ink);
-}
-
-.price-row .amt {
-  font-family: var(--font-display);
-  font-weight: 600;
-  color: var(--steel);
-  white-space: nowrap;
-}
-
-.price-row p {
-  grid-column: 1 / -1;
-  margin: 0;
-  font-size: 0.95rem;
 }
 
 /* ——— Responsive ——— */
