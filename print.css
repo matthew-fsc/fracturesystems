@@ -46,10 +46,6 @@
     align-items: start;
   }
 
-  .hero::after {
-    display: none !important;
-  }
-
   .hero-inner {
     width: 100%;
     padding: 0 0 8pt;
@@ -134,8 +130,6 @@
     padding: 7pt 0;
     border-top: 1px solid #ccc;
   }
-
-  .band::before { display: none; }
 
   .band h2,
   .band-grid h3 {

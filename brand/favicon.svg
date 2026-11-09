@@ -1,14 +1,3 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#0f1923"/>
-  <g fill="#34739e" transform="translate(4.5,5.5) scale(0.095)">
-    <polygon points="118,8 148,28 132,52 98,36"/>
-    <polygon points="148,28 188,18 204,48 168,58 132,52"/>
-    <polygon points="98,36 132,52 118,84 72,70 58,48"/>
-    <polygon points="132,52 168,58 158,96 118,84"/>
-    <polygon points="58,48 72,70 48,108 18,92 28,58"/>
-    <polygon points="72,70 118,84 96,128 52,118 48,108"/>
-    <polygon points="118,84 158,96 152,140 108,148 96,128"/>
-    <polygon points="168,58 204,48 228,78 198,110 158,96"/>
-    <polygon points="158,96 198,110 186,148 152,140"/>
-  </g>
+  <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADY0lEQVR4nO2WTW8TVxSGz7kznokdO57EiR2nFgbyUYUoDRRIlUQlEQskhLJgwy8AiT/Cgh2rqv+BbsqiUquyCLQhIiDaxBUi5MOU2nFsHMfx53junMPCcZBiO6maUqTKZ3vm3vc57z33zEVvsJ/hE4b4lOItgBZAC+BfA0CBEgBAc3VEnV5fBAAYEP/WfDk2AAohmVht8wWX3KHBqJnbGQBEBmb86ABVcVLdnw0sdI9MyJ1o5Esiuw0YmonXudIUAFHYjRZ8yCMxkWr0jz0OnL8ylFj8KUgVswMQCaBaPSISCmEjCqotOxIAEW0AAGZSqhzCroNBJGYWxtD5ucDE7Nexx99tyVI+iIqwEAWjELK6BwsmUphJCEUtOTR9+6CeWgegKEWXEVhBTZfldKJfmsXu/ZxAyQwCGBARZffZy5PpyK9z5UxyWigOk2xL/8AIlrsn9MbjD6VURZWl3bQj/24zYFXMrkMBSEpPaXtrxOkPLfWcm1kB4pfZtSWjmI6NMvH+90LVs2qby1BVXQAAkG3pbl/vemd4OO7tO026x9DM3E4lvR5xbEWXh8x8NnBQqyEAADKRbCskouOFRBQ6B849Cl+7NVrJZeK7ay9Wsqu/nZKlXK//wpVXDo9vspx7Z3eHh1+cmb3l6Og9OWyD3ScIleXvv5l/+/zhJAM69jZmQISDtwObvQc0T+dauz8c040eICYAQPBfvHqpEF+NWYXsdtfI1Gj80f1fDLdbjt+8M7MZmV/9/f69fOav14Mub0/K1eVPWYWMtptKDDHZOjM3bPg6AM3l2dA6fElVd1asUtFtZpMnpFnyAQC0B8LPgtM3BjXD791emltoF1Q+M3t7PPLg28WNJz9MNxI4KuqOwK6YRiH5Z4iJatYBCqUCzEph680Fu1JMyHLBa26+Jv/YjPrw7s1kcSc5DYhcvZosEJEBgYEZm1Xe1IH9BAobgBEQaK/5ODgx+8T3xcxkennuaXLxx89ty/RWAasD6Z840AiAoTYwEAmYheYx1oNT102h6Y7U85/T+djqV3uQBMBwVJWHRSPqmjgDs3D3nVrwnj6rZl4tmrsbkSkAGKiBMtOx/yWNbUNkRJDOrt4/FFWX8fkHY0y2ExAZAak2JY8rDnBID/xX8f94kLQAWgAtgOPEe+ShjR1HGzr8AAAAAElFTkSuQmCC" width="32" height="32" />
 </svg>
