@@ -28,7 +28,8 @@
   }
 
   .skip,
-  .nav { display: none; }
+  .nav,
+  body::after { display: none; content: none; }
 
   .masthead { padding-top: 0; }
 

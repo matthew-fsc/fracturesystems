@@ -59,7 +59,7 @@ a:focus-visible {
 }
 
 section[id],
-footer[id] { scroll-margin-top: 18px; }
+#contact { scroll-margin-top: 18px; }
 
 .eyebrow {
   font-family: var(--font-text);
@@ -544,7 +544,17 @@ footer[id] { scroll-margin-top: 18px; }
 footer {
   background: var(--band);
   color: var(--band-ink);
-  padding: 52px 0 56px;
+  padding: 32px 0 36px;
+}
+
+/* Room below the footer so #contact can bring the email up into the viewport. */
+@media screen {
+  body::after {
+    content: "";
+    display: block;
+    height: 28vh;
+    background: var(--band);
+  }
 }
 
 footer a { color: var(--band-ink); }
