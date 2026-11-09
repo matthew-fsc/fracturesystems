@@ -46,6 +46,11 @@
     align-items: start;
   }
 
+  .hero::after,
+  .band::before {
+    display: none !important;
+  }
+
   .hero-inner {
     width: 100%;
     padding: 0 0 8pt;
