@@ -1,0 +1,44 @@
+/* Fracture Systems color and type tokens.
+   Extracted from the site that already shipped in this repo.
+   Dark mode follows the visitor's system setting. Print resets
+   these variables in print.css so a dark desktop still prints light. */
+
+:root {
+  color-scheme: light;
+  --paper: #f6f4ef;
+  --paper-raised: #fffdf9;
+  --ink: #14181e;
+  --ink-soft: #414a56;
+  --ink-faint: #6d7784;
+  --rule: #d8d3c8;
+  --rule-soft: #e6e2d9;
+  --accent: #8c4a2f;
+  --accent-soft: #b8865f;
+  --band: #12161c;
+  --band-ink: #edeae3;
+  --band-faint: #9aa3ae;
+  --mark-tile: #12161c;
+  --mark-letter: #f4f1ea;
+  --font-text: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Source Serif Pro", Georgia, serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --paper: #12151a;
+    --paper-raised: #191d24;
+    --ink: #ecebe6;
+    --ink-soft: #b3bac4;
+    --ink-faint: #8b939e;
+    --rule: #2c323b;
+    --rule-soft: #232830;
+    --accent: #d08f5f;
+    --accent-soft: #a87a52;
+    --band: #0b0e12;
+    --band-ink: #ecebe6;
+    --band-faint: #8b939e;
+    --mark-tile: #0b0e12;
+    --mark-letter: #ecebe6;
+  }
+}
