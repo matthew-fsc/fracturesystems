@@ -1,0 +1,42 @@
+/* Fracture Systems brand tokens.
+   Palette sampled from the capability statement lockup.
+   Dark brand surfaces are intentional; body sections stay readable on slate paper. */
+
+:root {
+  color-scheme: dark light;
+  --navy: #0f1923;
+  --navy-deep: #0a1219;
+  --navy-lift: #162433;
+  --steel: #34739e;
+  --steel-bright: #4a8eb8;
+  --steel-soft: #6ea0bf;
+  --paper: #eef2f5;
+  --paper-raised: #f7f9fb;
+  --ink: #121a22;
+  --ink-soft: #3d4a57;
+  --ink-faint: #6a7886;
+  --rule: #d0d8e0;
+  --rule-soft: #e2e8ee;
+  --accent: var(--steel);
+  --accent-soft: var(--steel-bright);
+  --band: var(--navy);
+  --band-ink: #f4f7fa;
+  --band-faint: #9aadc0;
+  --mark-tile: var(--navy);
+  --mark-letter: #f4f7fa;
+  --font-display: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
+  --font-text: "Source Sans 3", "Source Sans Pro", "Avenir Next", "Segoe UI", sans-serif;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #121820;
+    --paper-raised: #18222d;
+    --ink: #eef2f5;
+    --ink-soft: #b4c0cc;
+    --ink-faint: #8796a6;
+    --rule: #2a3644;
+    --rule-soft: #1f2934;
+  }
+}
