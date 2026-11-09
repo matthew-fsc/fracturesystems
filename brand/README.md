@@ -1,49 +1,39 @@
 # Brand
 
-Mark, favicon, and color tokens for Fracture Systems Consulting LLC.
-The site links `tokens.css` and `favicon.svg`. There is no build step and
-no webfont file: type is a system stack, declared as `--font-text` and
-`--font-display` in `tokens.css`.
+Mark, favicon, lockup, and color tokens for Fracture Systems Consulting LLC.
+The site loads Google Fonts (Outfit + Source Sans 3) and links `tokens.css`
+via `styles.css`. There is no build step.
 
 ## Source
 
-These files are the identity already shipping in this repository (the mark
-was previously inlined as the favicon). Two repos named as further brand
-sources could not be cloned:
+Logo assets were cropped from the firm capability statement (Macro document),
+matching the blue fracture mark and “Fracture Systems” wordmark on navy.
 
-- `matthew-fsc/fracture-systems-site` — repository not found
-- `matthew-fsc/fracture-systems-branding` — repository not found
+## Files
 
-Nothing from any other repository was copied into this folder.
-
-## Mark
-
-`mark.svg` and `favicon.svg` are the same drawing: a tile `#12161c` and an
-F in `#f4f1ea`. `mark-reversed.svg` swaps those two fills for use on a light
-field. The header uses `mark.svg` with a hairline border so the tile stays
-visible on both the light page and the dark page.
+| File | Use |
+| --- | --- |
+| `logo-mark.png` | Fracture mark alone (transparent) |
+| `logo-lockup.png` | Mark + white wordmark (transparent; for dark fields) |
+| `logo-lockup-on-dark.png` | Same lockup composited on navy |
+| `logo-lockup-on-light.png` | Mark + navy wordmark (for light / print) |
+| `mark.svg` | Geometric SVG recreation of the fracture mark |
+| `favicon.svg` / `favicon.png` | Browser icon on navy tile |
+| `tokens.css` | Color and type tokens |
 
 ## Color
 
-| Token | Light | Dark |
-| --- | --- | --- |
-| paper | `#f6f4ef` | `#12151a` |
-| paper-raised | `#fffdf9` | `#191d24` |
-| ink | `#14181e` | `#ecebe6` |
-| ink-soft | `#414a56` | `#b3bac4` |
-| ink-faint | `#6d7784` | `#8b939e` |
-| rule | `#d8d3c8` | `#2c323b` |
-| rule-soft | `#e6e2d9` | `#232830` |
-| accent | `#8c4a2f` | `#d08f5f` |
-| accent-soft | `#b8865f` | `#a87a52` |
-| band | `#12161c` | `#0b0e12` |
-| band-ink | `#edeae3` | `#ecebe6` |
-| band-faint | `#9aa3ae` | `#8b939e` |
+| Token | Value |
+| --- | --- |
+| navy | `#0f1923` |
+| steel | `#34739e` |
+| paper | `#eef2f5` (dark scheme: `#121820`) |
+| ink | `#121a22` (dark scheme: `#eef2f5`) |
 
-Dark values apply under `prefers-color-scheme: dark`. Print forces the light
-set, in `print.css` at the repo root.
+Accent is steel blue throughout. Dark surfaces are intentional for the hero
+and site header; body sections use slate paper for reading.
 
 ## Type
 
-- Text: `-apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif`
-- Display: `"Iowan Old Style", "Palatino Linotype", Palatino, "Source Serif Pro", Georgia, serif`
+- Display: Outfit
+- Text: Source Sans 3

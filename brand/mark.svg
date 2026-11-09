@@ -1,4 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#12161c"/>
-  <path d="M9 7h14v3h-10v5h9v3h-9v7h-4z" fill="#f4f1ea"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" role="img" aria-label="Fracture Systems mark">
+  <!-- Geometric recreation of the capability-statement fracture mark -->
+  <g fill="#34739e">
+    <polygon points="118,8 148,28 132,52 98,36"/>
+    <polygon points="148,28 188,18 204,48 168,58 132,52"/>
+    <polygon points="98,36 132,52 118,84 72,70 58,48"/>
+    <polygon points="132,52 168,58 158,96 118,84"/>
+    <polygon points="58,48 72,70 48,108 18,92 28,58"/>
+    <polygon points="72,70 118,84 96,128 52,118 48,108"/>
+    <polygon points="118,84 158,96 152,140 108,148 96,128"/>
+    <polygon points="168,58 204,48 228,78 198,110 158,96"/>
+    <polygon points="158,96 198,110 186,148 152,140"/>
+  </g>
 </svg>

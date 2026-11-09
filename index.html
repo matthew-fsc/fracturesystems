@@ -5,236 +5,290 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fracture Systems Consulting LLC · Systems architecture and implementation</title>
 <meta name="description" content="Systems architecture and implementation for financial-services firms in transition. When firms acquire, merge, migrate, or scale, their systems fracture. We find the real infrastructure gaps, design the target architecture, and build it.">
-<meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#12151a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0f1923">
 <meta property="og:title" content="Fracture Systems Consulting LLC">
 <meta property="og:description" content="Systems architecture and implementation for financial-services firms in transition.">
 <meta property="og:type" content="website">
 <link rel="icon" href="brand/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="brand/tokens.css">
+<link rel="icon" href="brand/favicon.png" type="image/png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="print.css" media="print">
 </head>
 <body>
 
-<a class="skip" href="#content">Skip to content</a>
+<a class="skip-link" href="#content">Skip to content</a>
 
-<header class="masthead">
+<header class="site-header">
   <div class="wrap">
-    <div class="masthead-top">
-      <a class="identity" href="index.html">
-        <img class="mark" src="brand/mark.svg" width="28" height="28" alt="">
-        <span class="wordmark">Fracture Systems Consulting LLC</span>
-      </a>
-      <p class="hero-links masthead-links">
-        <a href="capability-statement.pdf">Download capability statement</a>
-      </p>
-    </div>
-    <nav class="nav" aria-label="Primary">
+    <a class="brand-link" href="index.html">
+      <img class="brand-mark" src="brand/logo-mark.png" width="48" height="32" alt="">
+      <span class="brand-wordmark">Fracture Systems<span>Consulting LLC</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
       <a href="#competencies">Competencies</a>
       <a href="#engagement">Engagement</a>
       <a href="#experience">Experience</a>
       <a href="roll-up.html">Roll-up</a>
-      <a href="#intake">Contact</a>
+      <a class="nav-cta" href="https://macro.com/app/book/eca4bc76-f4c4-539f-b771-cd7d7cb89034/fracture-discovery" target="_blank" rel="noopener noreferrer">Book</a>
     </nav>
   </div>
 </header>
 
 <main id="content">
 
-  <section class="hero home">
-    <div class="wrap">
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-inner">
+      <img class="hero-lockup hero-lockup-screen" src="brand/logo-lockup.png" width="840" height="280" alt="Fracture Systems">
+      <img class="hero-lockup hero-lockup-print" src="brand/logo-lockup-on-light.png" width="840" height="280" alt="">
       <h1>Systems architecture and implementation for financial-services firms in transition</h1>
-      <p class="lede">When firms acquire, merge, migrate, or scale, their systems fracture: duplicated data, broken integrations, manual workarounds. We find the real infrastructure gaps, design the target architecture, and build it.</p>
-      <p class="hero-links">
-        <a href="capability-statement.pdf">Download capability statement</a>
-        <a href="https://macro.com/app/book/eca4bc76-f4c4-539f-b771-cd7d7cb89034/fracture-discovery" target="_blank" rel="noopener noreferrer">Book a conversation</a>
-      </p>
+      <p class="hero-lead">When firms acquire, merge, migrate, or scale, their systems fracture: duplicated data, broken integrations, manual workarounds. We find the real infrastructure gaps, design the target architecture, and build it.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://macro.com/app/book/eca4bc76-f4c4-539f-b771-cd7d7cb89034/fracture-discovery" target="_blank" rel="noopener noreferrer">Book a conversation</a>
+        <a class="btn btn-ghost" href="capability-statement.pdf">Download capability statement</a>
+      </div>
     </div>
   </section>
 
-  <div class="wrap">
-
-    <section class="section" id="competencies">
-      <p class="eyebrow">Core competencies</p>
+  <section class="section" id="competencies">
+    <div class="wrap reveal">
+      <p class="section-kicker">Core competencies</p>
       <h2>What we design and build</h2>
-      <div class="competency-grid">
-        <article class="competency">
-          <h3>Enterprise architecture</h3>
-          <p>Target-state design, systems inventory, and integration mapping.</p>
-        </article>
-        <article class="competency">
-          <h3>M&amp;A and roll-up integration</h3>
-          <p>Post-acquisition consolidation of systems, entities, and data.</p>
-          <p class="more"><a href="roll-up.html">For acquirers: the roll-up operating model</a></p>
-        </article>
-        <article class="competency">
-          <h3>Data migration</h3>
-          <p>CRM and custodian migrations: mapping, reconciliation, cutover.</p>
-        </article>
-        <article class="competency">
-          <h3>Platform design</h3>
-          <p>Operating platforms built to absorb the next acquisition.</p>
-        </article>
-        <article class="competency">
-          <h3>Integration engineering</h3>
-          <p>APIs, workflow automation, and reporting across the stack.</p>
-        </article>
-        <article class="competency">
-          <h3>Intelligent automation</h3>
-          <p>Context-aware, guard-railed AI inside regulated workflows.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="transitions" id="transitions">
-      <p class="eyebrow">Transitions we handle</p>
-      <ul class="transition-list">
-        <li>Acquisitions and mergers</li>
-        <li>Roll-up consolidation</li>
-        <li>CRM migrations</li>
-        <li>Custodian migrations</li>
-        <li>Rapid expansion</li>
-      </ul>
-    </section>
-
-    <section class="why" id="why">
-      <p class="eyebrow">Why Fracture</p>
-      <div class="why-grid">
-        <article class="why-item">
-          <h3>Architect-led</h3>
-          <p>Detailed design processes reduce surprises.</p>
-        </article>
-        <article class="why-item">
-          <h3>Evidence first</h3>
-          <p>Every finding traced to source systems.</p>
-        </article>
-        <article class="why-item">
-          <h3>Breadth</h3>
-          <p>Experience across banks, wealth managers, fund administrators, and M&amp;A firms.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="experience" id="experience">
-      <p class="eyebrow">Selected experience</p>
-      <ol class="proofs">
-        <li>Delivered a firm-wide data platform: custom application, workflow integrations, and departmental dashboards on the Microsoft stack.</li>
-        <li>Solution architect on enterprise client-lifecycle platform implementations for global financial institutions.</li>
-        <li>Designed and built ExitBlueprint, a deal-readiness scoring platform for M&amp;A advisors preparing businesses for sale.</li>
+      <p class="section-lede">Six lines of work. Each one is architecture first, then build.</p>
+      <ol class="comp-list">
+        <li>
+          <span class="comp-num" aria-hidden="true">01</span>
+          <div>
+            <h3>Enterprise architecture</h3>
+            <p>Target-state design, systems inventory, and integration mapping.</p>
+          </div>
+        </li>
+        <li>
+          <span class="comp-num" aria-hidden="true">02</span>
+          <div>
+            <h3>M&amp;A and roll-up integration</h3>
+            <p>Post-acquisition consolidation of systems, entities, and data. <a href="roll-up.html">For acquirers: the roll-up operating model</a>.</p>
+          </div>
+        </li>
+        <li>
+          <span class="comp-num" aria-hidden="true">03</span>
+          <div>
+            <h3>Data migration</h3>
+            <p>CRM and custodian migrations: mapping, reconciliation, cutover.</p>
+          </div>
+        </li>
+        <li>
+          <span class="comp-num" aria-hidden="true">04</span>
+          <div>
+            <h3>Platform design</h3>
+            <p>Operating platforms built to absorb the next acquisition.</p>
+          </div>
+        </li>
+        <li>
+          <span class="comp-num" aria-hidden="true">05</span>
+          <div>
+            <h3>Integration engineering</h3>
+            <p>APIs, workflow automation, and reporting across the stack.</p>
+          </div>
+        </li>
+        <li>
+          <span class="comp-num" aria-hidden="true">06</span>
+          <div>
+            <h3>Intelligent automation</h3>
+            <p>Context-aware, guard-railed AI inside regulated workflows.</p>
+          </div>
+        </li>
       </ol>
-    </section>
+    </div>
+  </section>
 
-  </div>
-
-  <section class="band" id="engagement">
-    <div class="wrap">
-      <p class="eyebrow">How we engage</p>
-      <div class="track steps-4">
-        <div class="stage">
-          <div class="stage-name">1 · Conversation</div>
-          <div class="stage-work">Free, 20 to 30 minutes<span>on what changed and what it costs</span></div>
-          <p class="stage-cta"><a href="https://macro.com/app/book/eca4bc76-f4c4-539f-b771-cd7d7cb89034/fracture-discovery" target="_blank" rel="noopener noreferrer">Book a conversation</a></p>
-        </div>
-        <div class="stage">
-          <div class="stage-name">2 · Assessment</div>
-          <div class="stage-work">Fixed fee, 1 to 2 weeks<span>Findings, target architecture, roadmap.</span></div>
-        </div>
-        <div class="stage">
-          <div class="stage-name">3 · Implementation</div>
-          <div class="stage-work">Built to the approved architecture<span>with milestones and acceptance criteria</span></div>
-        </div>
-        <div class="stage">
-          <div class="stage-name">4 · Support</div>
-          <div class="stage-work">Warranty period<span>then an optional retainer</span></div>
-        </div>
+  <section class="band" id="transitions">
+    <div class="wrap reveal">
+      <p class="section-kicker">Transitions we handle</p>
+      <h2>The moments when systems stop matching the firm</h2>
+      <p class="section-lede">Acquisition, consolidation, migration, and growth all leave the same residue: fractured infrastructure.</p>
+      <div class="band-grid">
+        <article>
+          <h3>Acquisitions and mergers</h3>
+          <p>Two stacks, one firm. Inventory, map, and consolidate without freezing operations.</p>
+        </article>
+        <article>
+          <h3>Roll-up consolidation</h3>
+          <p>One operating model across every add-on, from the first close onward.</p>
+        </article>
+        <article>
+          <h3>CRM migrations</h3>
+          <p>Mapping, reconciliation, and cutover that hold under production load.</p>
+        </article>
+        <article>
+          <h3>Custodian migrations</h3>
+          <p>Feed, position, and household integrity through the switch.</p>
+        </article>
+        <article>
+          <h3>Rapid expansion</h3>
+          <p>Architecture that absorbs growth instead of accumulating workarounds.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <div class="wrap">
-
-    <section class="intake" id="intake" aria-labelledby="intake-title">
+  <section class="section" id="why">
+    <div class="wrap split reveal">
       <div>
-        <p class="eyebrow">Prospect intake</p>
-        <h2 id="intake-title">Tell us what changed</h2>
-        <p class="intro">Name the firm, the systems it runs on, and what just changed. That is enough to start. If you would rather talk first, book a conversation.</p>
-        <p class="book"><a href="https://macro.com/app/book/eca4bc76-f4c4-539f-b771-cd7d7cb89034/fracture-discovery" target="_blank" rel="noopener noreferrer">Book a conversation</a></p>
+        <p class="section-kicker">Why Fracture</p>
+        <h2>Architect-led. Evidence first.</h2>
+        <p class="section-lede">Detailed design processes reduce surprises. Every finding is traced to source systems.</p>
+        <ul class="proof-list">
+          <li>
+            <strong>Architect-led</strong>
+            <p>Detailed design processes reduce surprises.</p>
+          </li>
+          <li>
+            <strong>Evidence first</strong>
+            <p>Every finding traced to source systems.</p>
+          </li>
+          <li>
+            <strong>Breadth</strong>
+            <p>Experience across banks, wealth managers, fund administrators, and M&amp;A firms.</p>
+          </li>
+        </ul>
       </div>
-      <form class="intake-form" id="intake-form" action="mailto:matthew@fracturesystems.com" method="post" enctype="text/plain">
-        <div class="field-row">
-          <div class="field">
-            <label for="intake-name">Name</label>
-            <input id="intake-name" name="name" type="text" autocomplete="name" required maxlength="200">
-          </div>
-          <div class="field">
-            <label for="intake-firm">Firm</label>
-            <input id="intake-firm" name="firm" type="text" autocomplete="organization" required maxlength="200">
-          </div>
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="intake-email">Email</label>
-            <input id="intake-email" name="email" type="email" autocomplete="email" required maxlength="200">
-          </div>
-          <div class="field">
-            <label for="intake-firm-type">Firm type</label>
-            <select id="intake-firm-type" name="firmType" required>
-              <option value="">Select</option>
-              <option value="bank">Bank</option>
-              <option value="wealth-manager">Wealth manager</option>
-              <option value="fund-administrator">Fund administrator</option>
-              <option value="insurance-accounting-advisory">Insurance, accounting, or advisory</option>
-              <option value="pe-platform-or-family-office">PE platform or family office</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-        </div>
-        <div class="field">
-          <label for="intake-changed">What changed</label>
+      <aside class="experience-block" id="experience">
+        <h3>Selected experience</h3>
+        <p>Delivered a firm-wide data platform: custom application, workflow integrations, and departmental dashboards on the Microsoft stack.</p>
+        <p>Solution architect on enterprise client-lifecycle platform implementations for global financial institutions.</p>
+        <p>Designed and built ExitBlueprint, a deal-readiness scoring platform for M&amp;A advisors preparing businesses for sale.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="engagement">
+    <div class="wrap reveal">
+      <p class="section-kicker">How we engage</p>
+      <h2>Conversation to support</h2>
+      <p class="section-lede">A short path from what changed to a working architecture.</p>
+      <ol class="steps">
+        <li>
+          <h3>Conversation</h3>
+          <p>Free, 20 to 30 minutes on what changed and what it costs.</p>
+        </li>
+        <li>
+          <h3>Assessment</h3>
+          <p>Fixed fee, 1 to 2 weeks. Findings, target architecture, roadmap.</p>
+        </li>
+        <li>
+          <h3>Implementation</h3>
+          <p>Built to the approved architecture with milestones and acceptance criteria.</p>
+        </li>
+        <li>
+          <h3>Support</h3>
+          <p>Warranty period, then an optional retainer.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="acquirer">
+    <div class="wrap reveal">
+      <div>
+        <h2>For acquirers: the roll-up operating model</h2>
+        <p>Every acquisition on the same numbers—from LOI through each add-on.</p>
+      </div>
+      <a class="btn btn-on-light" href="roll-up.html">See the roll-up model</a>
+    </div>
+  </section>
+
+  <section class="contact" id="intake" aria-labelledby="intake-title">
+    <div class="wrap contact-grid reveal">
+      <div>
+        <p class="section-kicker">Prospect intake</p>
+        <h2 id="intake-title">Tell us what changed</h2>
+        <p class="section-lede">Name the firm, the systems it runs on, and what just changed. That is enough to start. If you would rather talk first, book a conversation.</p>
+        <a class="btn btn-on-light" href="https://macro.com/app/book/eca4bc76-f4c4-539f-b771-cd7d7cb89034/fracture-discovery" target="_blank" rel="noopener noreferrer">Book a conversation</a>
+        <ul class="contact-meta">
+          <li><a href="mailto:matthew@fracturesystems.com">matthew@fracturesystems.com</a></li>
+          <li><a href="tel:+17166802667">+1 716-680-2667</a></li>
+          <li>Winter Garden, Florida</li>
+          <li>NAICS 541512, 541511, 541611</li>
+        </ul>
+      </div>
+      <form class="intake" id="intake-form" action="mailto:matthew@fracturesystems.com" method="post" enctype="text/plain">
+        <label for="intake-name">Name
+          <input id="intake-name" name="name" type="text" autocomplete="name" required maxlength="200">
+        </label>
+        <label for="intake-firm">Firm
+          <input id="intake-firm" name="firm" type="text" autocomplete="organization" required maxlength="200">
+        </label>
+        <label for="intake-email">Email
+          <input id="intake-email" name="email" type="email" autocomplete="email" required maxlength="200">
+        </label>
+        <label for="intake-firm-type">Firm type
+          <select id="intake-firm-type" name="firmType" required>
+            <option value="">Select</option>
+            <option value="bank">Bank</option>
+            <option value="wealth-manager">Wealth manager</option>
+            <option value="fund-administrator">Fund administrator</option>
+            <option value="insurance-accounting-advisory">Insurance, accounting, or advisory</option>
+            <option value="pe-platform-or-family-office">PE platform or family office</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+        <label for="intake-changed">What changed
           <textarea id="intake-changed" name="whatChanged" required maxlength="4000" placeholder="A migration, an acquisition, a system that no longer matches the firm."></textarea>
-        </div>
-        <div class="field">
-          <label for="intake-systems">Systems in use</label>
+        </label>
+        <label for="intake-systems">Systems in use
           <textarea id="intake-systems" name="systemsInUse" required maxlength="4000" placeholder="CRM, custodian, portfolio accounting, billing, data warehouse."></textarea>
-        </div>
+        </label>
         <div class="hp" aria-hidden="true">
           <label for="intake-website">Website</label>
           <input id="intake-website" name="website" type="text" tabindex="-1" autocomplete="off">
         </div>
-        <div class="form-actions">
-          <button type="submit">Send</button>
-          <p class="form-status" id="intake-status" role="status"></p>
+        <div class="intake-actions">
+          <button class="btn btn-on-light" type="submit">Send</button>
         </div>
+        <p class="form-status" id="intake-status" role="status"></p>
       </form>
-    </section>
-
-  </div>
+    </div>
+  </section>
 
 </main>
 
-<footer>
+<footer class="site-footer">
   <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-name">Fracture Systems Consulting LLC</div>
-        <div class="contact">
-          Matthew Bajdas<br>
-          Founder and Principal Architect<br>
-          <a href="mailto:matthew@fracturesystems.com">matthew@fracturesystems.com</a><br>
-          <a href="tel:+17166802667">+1 716-680-2667</a><br>
-          <span class="place">Winter Garden, Florida</span><br>
-          <span class="place">NAICS 541512, 541511, 541611</span>
-        </div>
-      </div>
-      <div>
-        <p class="disclaimer">Scope and fees are agreed in writing. This page is for discussion and is not an offer. Not legal, tax or accounting advice. The <a href="roll-up.html">roll-up operating model</a> for acquirers states its own terms.</p>
-        <p class="disclaimer"><a href="capability-statement.pdf">Download capability statement</a></p>
-      </div>
+    <a class="footer-brand" href="index.html">
+      <img src="brand/logo-mark.png" width="32" height="22" alt="">
+      Fracture Systems Consulting LLC
+    </a>
+    <div>
+      Matthew Bajdas · Founder and Principal Architect ·
+      <a href="capability-statement.pdf">Capability statement</a>
     </div>
+  </div>
+  <div class="wrap" style="margin-top:1rem;opacity:0.85">
+    <p style="margin:0;max-width:52rem">Scope and fees are agreed in writing. This page is for discussion and is not an offer. Not legal, tax or accounting advice. The <a href="roll-up.html">roll-up operating model</a> for acquirers states its own terms.</p>
   </div>
 </footer>
 
 <script src="intake.js"></script>
+<script>
+(function () {
+  var nodes = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window) || !nodes.length) {
+    nodes.forEach(function (n) { n.classList.add("is-visible"); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add("is-visible");
+        io.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+  nodes.forEach(function (n) { io.observe(n); });
+})();
+</script>
 </body>
 </html>
