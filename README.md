@@ -1,73 +1,55 @@
 # fracturesystems
 
-Site for **Fracture Systems Consulting LLC** — architecture and implementation
-for financial-services firms.
-
-Audiences: banks, wealth managers, fund administrators, insurance, accounting
-and advisory firms, and private equity platforms and family offices rolling
-up services firms.
+Site for **Fracture Systems Consulting LLC** — systems architecture and
+implementation for financial-services firms in transition.
 
 ## What this is
 
-A static site, two pages, no build step and no dependencies.
+A static site, no build step and no dependencies.
 
-- `index.html` — the firm. Five service lines (architecture assessment,
-  platform implementation, M&A and roll-up integration, intelligent
-  automation, retainer) and the engagement sequence: conversation, assessment,
-  implementation, support. About, prospect intake, and contact are on
-  this page.
-- `roll-up.html` — the M&A and roll-up offer: systems and data diligence,
-  operating visibility, fold-in, and the monthly pack, with the existing
-  scope and pricing.
+- `index.html` — the capability statement: headline, lead, six core
+  competencies, transitions, why Fracture, selected experience, how we
+  engage, and the prospect intake form.
+- `roll-up.html` — the M&A and roll-up operating model for acquirers
+  (systems and data diligence, operating visibility, fold-in, monthly
+  pack). Linked from the M&A competency card as "For acquirers: the
+  roll-up operating model".
+- `capability-statement.pdf` — printable one-page capability statement.
 
 Contact: [matthew@fracturesystems.com](mailto:matthew@fracturesystems.com).
+Book a conversation:
+[Macro discovery](https://macro.com/app/book/eca4bc76-f4c4-539f-b771-cd7d7cb89034/fracture-discovery).
 
 ## Repo layout
 
 ```
-index.html                    firm homepage
-roll-up.html                  M&A and roll-up offer
+index.html                    capability statement + intake
+roll-up.html                  roll-up operating model for acquirers
+capability-statement.pdf      one-page capability statement download
 styles.css                    layout, shared by both pages
-print.css                     print stylesheet (light paper, both pages)
+print.css                     one-page capability print for the homepage
 intake.js                     prospect form. POST JSON, or mailto when unset
-brand/tokens.css              color and type tokens, including dark mode
-brand/favicon.svg             favicon
-brand/mark.svg                header mark
-brand/mark-reversed.svg       mark for a light field
-brand/README.md               palette, type, and where the files came from
+brand/                        mark, favicon, color and type tokens
 .github/workflows/static.yml  deploys the repo root to GitHub Pages on push to main
 ```
 
-`brand/` holds the mark and the tokens taken from the site that already
-shipped here. `matthew-fsc/fracture-systems-site` and
-`matthew-fsc/fracture-systems-branding` were not available to clone
-(repository not found), so no files were imported from them. See
-`brand/README.md`.
-
 ## Working on it
 
-No toolchain. Serve the directory and open the two pages:
+No toolchain. Serve the directory:
 
 ```
 python3 -m http.server 8000
 ```
 
-Relative links also work if you open `index.html` from disk. Colors are CSS
-custom properties. Dark mode follows `prefers-color-scheme`. Print forces a
-light page, including the offer page, so it still prints as a clean document.
+Colors are CSS custom properties. Dark mode follows `prefers-color-scheme`.
+Print forces a light one-page capability statement from the homepage
+(intake and navigation omitted). Layout breakpoints are 940px and 560px.
 
-Layout breakpoints are 940px and 560px.
-
-The intake form is on the homepage. `intake.js` posts JSON to `INTAKE_URL`
-(`POST /intake` on Fracture OS, once that service is deployed). Leave the
-constant empty and the form opens a mailto to
-matthew@fracturesystems.com with the same fields. A hidden website field
-is a honeypot: if it is filled, the form does not send. There is no
-third-party form service. `matthew-fsc/fracture-factory-orchestrator` was
-not available to clone, so the JSON body is the fields on the form:
-`name`, `firm`, `email`, `firmType`, `whatChanged`, `systemsInUse`.
+The intake form posts JSON to `INTAKE_URL` in `intake.js`. Leave the
+constant empty and the form opens a mailto. A hidden website field is a
+honeypot. No third-party form service.
 
 ## Deploying
 
 Push to `main`. The Pages workflow uploads the repo root and deploys it.
-The workflow is unchanged: static files only, no build.
+Static files only, no build.

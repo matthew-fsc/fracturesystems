@@ -115,6 +115,11 @@ section[id] { scroll-margin-top: 18px; }
   color: var(--ink-faint);
 }
 
+.masthead-links {
+  margin: 0;
+  font-size: 13.5px;
+}
+
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -142,14 +147,9 @@ section[id] { scroll-margin-top: 18px; }
 .hero { padding: 72px 0 56px; }
 
 .hero h1 {
-  font-size: clamp(36px, 5.4vw, 56px);
-  max-width: 16ch;
-  margin-bottom: 26px;
-}
-
-.hero.home h1 {
   font-size: clamp(34px, 4.8vw, 52px);
   max-width: 20ch;
+  margin-bottom: 26px;
 }
 
 .hero .lede {
@@ -171,22 +171,130 @@ section[id] { scroll-margin-top: 18px; }
   font-size: 15.5px;
 }
 
-.audiences {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 28px 0 0;
-  padding: 0;
+/* ---------- competency cards ---------- */
+
+.section {
+  padding: 10px 0 10px;
 }
 
-.audiences li {
-  font-size: 13px;
-  letter-spacing: 0.01em;
+.section h2 {
+  font-size: clamp(28px, 3.4vw, 36px);
+  margin-bottom: 28px;
+}
+
+.competency-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.competency {
+  padding: 28px 24px 28px 0;
+  border-bottom: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
+}
+
+.competency:nth-child(3n) { border-right: 0; padding-right: 0; }
+
+.competency:nth-child(3n+1) { padding-left: 0; }
+
+.competency h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.competency p {
   color: var(--ink-soft);
-  border: 1px solid var(--rule);
-  background: var(--paper-raised);
-  padding: 6px 10px;
+  font-size: 15.5px;
+  max-width: 34ch;
+}
+
+.competency .more {
+  margin-top: 14px;
+  font-size: 14.5px;
+}
+
+/* ---------- transitions ---------- */
+
+.transitions {
+  border-top: 1px solid var(--rule);
+  padding: 52px 0 48px;
+  margin-top: 48px;
+}
+
+.transition-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+}
+
+.transition-list li {
+  font-size: 16px;
+  color: var(--ink);
+  padding-left: 14px;
+  position: relative;
+}
+
+.transition-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+}
+
+/* ---------- why ---------- */
+
+.why {
+  border-top: 1px solid var(--rule);
+  padding: 52px 0 10px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 36px;
+  padding-bottom: 18px;
+}
+
+.why-item h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.why-item p {
+  color: var(--ink-soft);
+  font-size: 15.5px;
+  max-width: 34ch;
+}
+
+/* ---------- experience ---------- */
+
+.experience {
+  border-top: 1px solid var(--rule);
+  padding: 52px 0 64px;
+  margin-top: 34px;
+}
+
+.proofs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.proofs li {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink-soft);
+  font-size: 15.5px;
+  max-width: 78ch;
 }
 
 /* ---------- engagement band ---------- */
@@ -199,17 +307,9 @@ section[id] { scroll-margin-top: 18px; }
 
 .band .eyebrow { color: var(--accent-soft); }
 
-.band h2 {
-  color: var(--band-ink);
-  font-size: clamp(28px, 3.2vw, 36px);
-  max-width: 20ch;
-  margin-bottom: 32px;
-}
-
 .band-caption {
   font-size: 12.5px;
   line-height: 1.5;
-  letter-spacing: 0.01em;
   color: var(--band-faint);
   margin: 28px 0 0;
   max-width: 68ch;
@@ -272,82 +372,17 @@ section[id] { scroll-margin-top: 18px; }
   margin-top: 2px;
 }
 
-/* ---------- services ---------- */
-
-.section {
-  padding: 72px 0 10px;
-}
-
-.section h2 {
-  font-size: clamp(28px, 3.4vw, 36px);
-  margin-bottom: 8px;
-}
-
-.section-lead {
-  max-width: 62ch;
-  color: var(--ink-soft);
-  margin-bottom: 10px;
-}
-
-.service {
-  display: grid;
-  grid-template-columns: 64px minmax(0, 0.9fr) minmax(0, 1.35fr);
-  gap: 18px 28px;
-  padding: 30px 0;
-  border-top: 1px solid var(--rule);
-}
-
-.service:last-child { border-bottom: 1px solid var(--rule); }
-
-.service-num {
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--accent);
-  letter-spacing: -0.02em;
-}
-
-.service h3 {
-  font-size: 26px;
-  margin-bottom: 8px;
-}
-
-.service .terms {
+.stage-cta {
+  margin: 14px 0 0;
   font-size: 13px;
-  color: var(--ink-faint);
 }
 
-.service .terms b {
-  color: var(--ink);
-  font-weight: 600;
+.stage-cta a {
+  color: var(--band-ink);
+  text-decoration-color: var(--accent-soft);
 }
 
-.service-body {
-  color: var(--ink-soft);
-  font-size: 15.5px;
-}
-
-.fees {
-  list-style: none;
-  margin: 16px 0 0;
-  padding: 0;
-}
-
-.fees li {
-  padding: 10px 0;
-  border-top: 1px solid var(--rule-soft);
-  font-size: 15px;
-}
-
-.fees b {
-  display: block;
-  color: var(--ink);
-  font-weight: 600;
-}
-
-.more { display: inline-block; margin-top: 14px; }
-
-/* ---------- roll-up offers ---------- */
+/* ---------- roll-up offers (secondary page) ---------- */
 
 .offers {
   padding: 64px 0 10px;
@@ -416,8 +451,6 @@ section[id] { scroll-margin-top: 18px; }
   margin-bottom: 2px;
 }
 
-/* ---------- continuity ---------- */
-
 .continuity {
   padding: 72px 0 66px;
   display: grid;
@@ -462,8 +495,6 @@ section[id] { scroll-margin-top: 18px; }
   margin-top: 4px;
 }
 
-/* ---------- principles ---------- */
-
 .principles {
   border-top: 1px solid var(--rule);
   padding: 58px 0 62px;
@@ -481,49 +512,6 @@ section[id] { scroll-margin-top: 18px; }
   font-size: 15px;
   color: var(--ink-soft);
 }
-
-/* ---------- about ---------- */
-
-.about {
-  padding: 72px 0 68px;
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  gap: 48px;
-  align-items: start;
-  border-top: 1px solid var(--rule);
-  margin-top: 28px;
-}
-
-.about h2 {
-  font-size: clamp(28px, 3.4vw, 36px);
-  margin-bottom: 18px;
-  max-width: 16ch;
-}
-
-.about p { color: var(--ink-soft); max-width: 52ch; }
-
-.proofs {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border-top: 1px solid var(--rule);
-}
-
-.proofs li {
-  padding: 18px 0;
-  border-bottom: 1px solid var(--rule);
-  color: var(--ink-soft);
-  font-size: 15.5px;
-}
-
-.proofs b {
-  display: block;
-  color: var(--ink);
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-/* ---------- built for ---------- */
 
 .built-for {
   border-top: 1px solid var(--rule);
@@ -561,9 +549,7 @@ section[id] { scroll-margin-top: 18px; }
   margin-bottom: 18px;
 }
 
-.book {
-  font-size: 15.5px;
-}
+.book { font-size: 15.5px; }
 
 .intake-form {
   display: grid;
@@ -680,7 +666,6 @@ footer {
   padding: 32px 0 36px;
 }
 
-/* Room below the footer so the intake email can scroll fully into view. */
 @media screen {
   body::after {
     content: "";
@@ -729,6 +714,11 @@ footer a { color: var(--band-ink); }
 .disclaimer a { color: var(--band-ink); }
 
 @media (max-width: 940px) {
+  .competency-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .competency { border-right: 1px solid var(--rule); padding-right: 20px; }
+  .competency:nth-child(3n) { border-right: 1px solid var(--rule); padding-right: 20px; }
+  .competency:nth-child(2n) { border-right: 0; padding-right: 0; }
+  .why-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
   .track {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 32px;
@@ -744,13 +734,10 @@ footer a { color: var(--band-ink); }
   .stage-work { margin-top: 14px; }
   .offers { grid-template-columns: minmax(0, 1fr); gap: 26px; }
   .continuity,
-  .about,
   .intake { grid-template-columns: minmax(0, 1fr); gap: 34px; }
-  .field-row { grid-template-columns: minmax(0, 1fr); }
   .principles { grid-template-columns: minmax(0, 1fr); gap: 30px; }
   .footer-grid { grid-template-columns: minmax(0, 1fr); }
-  .service { grid-template-columns: 48px minmax(0, 1fr); }
-  .service-body { grid-column: 1 / -1; }
+  .field-row { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (max-width: 560px) {
@@ -758,11 +745,19 @@ footer a { color: var(--band-ink); }
   .wrap { padding: 0 20px; }
   .wordmark { letter-spacing: 0.12em; font-size: 12px; }
   .hero { padding: 48px 0 40px; }
+  .competency-grid { grid-template-columns: minmax(0, 1fr); }
+  .competency,
+  .competency:nth-child(3n),
+  .competency:nth-child(2n) {
+    border-right: 0;
+    padding-right: 0;
+  }
   .track,
   .track.steps-4 { grid-template-columns: minmax(0, 1fr); row-gap: 26px; }
   .offer { padding: 28px 22px 26px; }
-  .service { grid-template-columns: minmax(0, 1fr); gap: 8px; }
   .section,
-  .about,
-  .intake { padding-top: 48px; }
+  .intake,
+  .experience,
+  .why,
+  .transitions { padding-top: 40px; }
 }
