@@ -58,8 +58,7 @@ a:focus-visible {
   padding: 0 28px;
 }
 
-section[id],
-#contact { scroll-margin-top: 18px; }
+section[id] { scroll-margin-top: 18px; }
 
 .eyebrow {
   font-family: var(--font-text);
@@ -539,6 +538,140 @@ section[id],
 
 .built-for b { color: var(--ink); font-weight: 600; }
 
+/* ---------- intake ---------- */
+
+.intake {
+  border-top: 1px solid var(--rule);
+  padding: 72px 0 76px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.intake h2 {
+  font-size: clamp(28px, 3.4vw, 36px);
+  margin-bottom: 16px;
+  max-width: 14ch;
+}
+
+.intake .intro {
+  color: var(--ink-soft);
+  max-width: 42ch;
+  margin-bottom: 18px;
+}
+
+.book {
+  font-size: 15.5px;
+}
+
+.intake-form {
+  display: grid;
+  gap: 16px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.field label,
+.intake-form legend {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.intake-form input,
+.intake-form select,
+.intake-form textarea {
+  width: 100%;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  background: var(--paper-raised);
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.intake-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.intake-form input:focus-visible,
+.intake-form select:focus-visible,
+.intake-form textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.intake-form input::placeholder,
+.intake-form textarea::placeholder {
+  color: var(--ink-faint);
+}
+
+.hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 18px;
+}
+
+.intake-form button {
+  appearance: none;
+  border: 0;
+  background: var(--band);
+  color: var(--band-ink);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.intake-form button:hover { color: var(--accent-soft); }
+
+.intake-form button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.intake-form button:disabled {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+.form-status {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  max-width: 46ch;
+}
+
+.form-status[data-state="error"] { color: var(--accent); }
+
+.form-status a { font-weight: 600; }
+
 /* ---------- footer ---------- */
 
 footer {
@@ -547,7 +680,7 @@ footer {
   padding: 32px 0 36px;
 }
 
-/* Room below the footer so #contact can bring the email up into the viewport. */
+/* Room below the footer so the intake email can scroll fully into view. */
 @media screen {
   body::after {
     content: "";
@@ -611,7 +744,9 @@ footer a { color: var(--band-ink); }
   .stage-work { margin-top: 14px; }
   .offers { grid-template-columns: minmax(0, 1fr); gap: 26px; }
   .continuity,
-  .about { grid-template-columns: minmax(0, 1fr); gap: 34px; }
+  .about,
+  .intake { grid-template-columns: minmax(0, 1fr); gap: 34px; }
+  .field-row { grid-template-columns: minmax(0, 1fr); }
   .principles { grid-template-columns: minmax(0, 1fr); gap: 30px; }
   .footer-grid { grid-template-columns: minmax(0, 1fr); }
   .service { grid-template-columns: 48px minmax(0, 1fr); }
@@ -628,5 +763,6 @@ footer a { color: var(--band-ink); }
   .offer { padding: 28px 22px 26px; }
   .service { grid-template-columns: minmax(0, 1fr); gap: 8px; }
   .section,
-  .about { padding-top: 48px; }
+  .about,
+  .intake { padding-top: 48px; }
 }

@@ -14,7 +14,8 @@ A static site, two pages, no build step and no dependencies.
 - `index.html` — the firm. Five service lines (architecture assessment,
   platform implementation, M&A and roll-up integration, intelligent
   automation, retainer) and the engagement sequence: conversation, assessment,
-  implementation, support. About and contact are on this page.
+  implementation, support. About, prospect intake, and contact are on
+  this page.
 - `roll-up.html` — the M&A and roll-up offer: systems and data diligence,
   operating visibility, fold-in, and the monthly pack, with the existing
   scope and pricing.
@@ -28,6 +29,7 @@ index.html                    firm homepage
 roll-up.html                  M&A and roll-up offer
 styles.css                    layout, shared by both pages
 print.css                     print stylesheet (light paper, both pages)
+intake.js                     prospect form. POST JSON, or mailto when unset
 brand/tokens.css              color and type tokens, including dark mode
 brand/favicon.svg             favicon
 brand/mark.svg                header mark
@@ -55,6 +57,15 @@ custom properties. Dark mode follows `prefers-color-scheme`. Print forces a
 light page, including the offer page, so it still prints as a clean document.
 
 Layout breakpoints are 940px and 560px.
+
+The intake form is on the homepage. `intake.js` posts JSON to `INTAKE_URL`
+(`POST /intake` on Fracture OS, once that service is deployed). Leave the
+constant empty and the form opens a mailto to
+matthew@fracturesystems.com with the same fields. A hidden website field
+is a honeypot: if it is filled, the form does not send. There is no
+third-party form service. `matthew-fsc/fracture-factory-orchestrator` was
+not available to clone, so the JSON body is the fields on the form:
+`name`, `firm`, `email`, `firmType`, `whatChanged`, `systemsInUse`.
 
 ## Deploying
 

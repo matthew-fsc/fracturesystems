@@ -32,7 +32,7 @@
       <a href="#engagement">Engagement</a>
       <a href="roll-up.html">Roll-up</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#intake">Contact</a>
     </nav>
   </div>
 </header>
@@ -170,6 +170,61 @@
       </div>
     </section>
 
+    <section class="intake" id="intake" aria-labelledby="intake-title">
+      <div>
+        <p class="eyebrow">Prospect intake</p>
+        <h2 id="intake-title">Tell us what changed</h2>
+        <p class="intro">Name the firm, the systems it runs on, and what just changed. That is enough to start. If you would rather talk first, book a conversation.</p>
+        <p class="book"><a href="mailto:matthew@fracturesystems.com?subject=Conversation">Book a conversation</a></p>
+      </div>
+      <form class="intake-form" id="intake-form" action="mailto:matthew@fracturesystems.com" method="post" enctype="text/plain">
+        <div class="field-row">
+          <div class="field">
+            <label for="intake-name">Name</label>
+            <input id="intake-name" name="name" type="text" autocomplete="name" required maxlength="200">
+          </div>
+          <div class="field">
+            <label for="intake-firm">Firm</label>
+            <input id="intake-firm" name="firm" type="text" autocomplete="organization" required maxlength="200">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="intake-email">Email</label>
+            <input id="intake-email" name="email" type="email" autocomplete="email" required maxlength="200">
+          </div>
+          <div class="field">
+            <label for="intake-firm-type">Firm type</label>
+            <select id="intake-firm-type" name="firmType" required>
+              <option value="">Select</option>
+              <option value="bank">Bank</option>
+              <option value="wealth-manager">Wealth manager</option>
+              <option value="fund-administrator">Fund administrator</option>
+              <option value="insurance-accounting-advisory">Insurance, accounting, or advisory</option>
+              <option value="pe-platform-or-family-office">PE platform or family office</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="intake-changed">What changed</label>
+          <textarea id="intake-changed" name="whatChanged" required maxlength="4000" placeholder="A migration, an acquisition, a system that no longer matches the firm."></textarea>
+        </div>
+        <div class="field">
+          <label for="intake-systems">Systems in use</label>
+          <textarea id="intake-systems" name="systemsInUse" required maxlength="4000" placeholder="CRM, custodian, portfolio accounting, billing, data warehouse."></textarea>
+        </div>
+        <div class="hp" aria-hidden="true">
+          <label for="intake-website">Website</label>
+          <input id="intake-website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="form-actions">
+          <button type="submit">Send</button>
+          <p class="form-status" id="intake-status" role="status"></p>
+        </div>
+      </form>
+    </section>
+
   </div>
 
 </main>
@@ -180,7 +235,7 @@
       <div>
         <div class="footer-name">Fracture Systems Consulting LLC</div>
         <div class="contact">
-          <a id="contact" href="mailto:matthew@fracturesystems.com">matthew@fracturesystems.com</a><br>
+          <a href="mailto:matthew@fracturesystems.com">matthew@fracturesystems.com</a><br>
           Matthew Bajdas<br>
           <a href="tel:+17166802667">716-680-2667</a><br>
           <span class="place">Florida</span>
@@ -191,5 +246,6 @@
   </div>
 </footer>
 
+<script src="intake.js"></script>
 </body>
 </html>
