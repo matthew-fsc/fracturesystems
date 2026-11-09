@@ -46,7 +46,6 @@
     align-items: start;
   }
 
-  .hero::before,
   .hero::after {
     display: none !important;
   }

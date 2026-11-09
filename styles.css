@@ -164,21 +164,6 @@ a:hover {
   isolation: isolate;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image: url("brand/logo-mark.png");
-  background-repeat: no-repeat;
-  background-position: 108% 18%;
-  background-size: min(58vw, 520px) auto;
-  opacity: 0.14;
-  filter: blur(0.5px);
-  animation: mark-drift 18s var(--ease-out) infinite alternate;
-  pointer-events: none;
-}
-
 .hero::after {
   content: "";
   position: absolute;
@@ -193,11 +178,6 @@ a:hover {
       rgba(255, 255, 255, 0.015) 49px
     );
   pointer-events: none;
-}
-
-@keyframes mark-drift {
-  from { transform: translate3d(0, 0, 0) scale(1); }
-  to { transform: translate3d(-3%, 4%, 0) scale(1.04); }
 }
 
 .hero-inner {
@@ -259,10 +239,6 @@ a:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero::before {
-    animation: none;
-  }
-
   .hero-lockup,
   .hero h1,
   .hero-lead,
@@ -749,12 +725,6 @@ a:hover {
 
   .hero {
     min-height: auto;
-  }
-
-  .hero::before {
-    background-position: 120% 0%;
-    background-size: min(70vw, 360px) auto;
-    opacity: 0.1;
   }
 }
 
